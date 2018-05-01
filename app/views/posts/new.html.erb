@@ -1,0 +1,23 @@
+<h1>Post Your Event</h1>
+
+<%= form_with scope: :post, url: posts_path, local: true do |form| %>
+  <p>
+    <%= form.label :Title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :Content %><br>
+    <%= form.text_field :content %>
+  </p>
+
+  <select name="[create]category">
+		<option value="Meals">Meals</option>
+	  <option value="Supplies">Supplies</option>
+	  <option value="Housing">Housing</option>
+		<option value="Work">Work</option>
+	</select>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
