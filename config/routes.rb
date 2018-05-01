@@ -5,14 +5,24 @@ root 'home#landingpage'
   get 'users/profile'
 
   get 'users/center'
+  put 'users/center'
 
   get 'posts/jobs'
   post 'posts/jobs'
+  put 'posts/jobs'
+
   get 'posts/meals'
   post 'posts/meals'
+  put 'posts/meals'
+
   get 'posts/shelters'
+  post 'posts/shetlers'
+  put 'posts/shetlers'
+
+
   get 'posts/supplies'
   post 'posts/supplies'
+  put 'posts/supplies' 
 
 
   devise_for :users
