@@ -17,6 +17,12 @@ root 'home#landingpage'
 
   
 
+ 
+
+ 
+
+ 
+
 
   devise_for :users
 
