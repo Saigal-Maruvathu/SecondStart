@@ -4,26 +4,19 @@ root 'home#landingpage'
   get 'home/logoutpage'
   get 'users/profile'
 
-  get 'users/center'
-  put 'users/center'
-
-  get 'posts/jobs'
-  post 'posts/jobs'
-  put 'posts/jobs'
-
-  get 'posts/meals'
-  post 'posts/meals'
-  put 'posts/meals'
-
-  get 'posts/shelters'
-  post 'posts/shetlers'
-  put 'posts/shetlers'
-
-
-  get 'posts/supplies'
-  post 'posts/supplies'
-  put 'posts/supplies' 
-
+  get    '/welcome',   to: 'home#landingpage'
+    get     '/center',   to:  'center#users'
+    get    '/about',     to: 'home#about'
+    get    '/contact',   to: 'home#contact'
+    get    '/logout',    to: 'home#logoutpage'
+    get    '/jobs',      to:  'posts#jobs'
+    post   '/jobs',      to:  'posts#jobs'
+    get    '/meals',      to:  'posts#meals'
+    post   '/meals',      to:  'posts#meals'
+    get    '/shelters',      to:  'posts#shelters'
+    post   '/shelters',      to:  'posts#shelters'
+    get    '/supplies',      to:  'posts#supplies'
+    post   '/supplies',      to:  'posts#supplies'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
