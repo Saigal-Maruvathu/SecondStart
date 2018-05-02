@@ -1,34 +1,33 @@
 Rails.application.routes.draw do
 root 'home#landingpage'
-  get 'home/landingpage'
-  get 'home/logoutpage'
-  get 'users/profile'
+  
+  get    '/welcome',          to: 'home#landingpage'
+  get     '/center',          to: 'centers#new'
+  get    '/about',            to: 'home#about'
+  get    '/contact',          to: 'home#contact'
+  get    '/logout',           to: 'home#logoutpage'
+  get    '/jobs',             to:  'posts#jobs'
+  post   '/create_jobs',      to:  'posts#jobs'
+  get    '/meals',            to:  'posts#meals'
+  post   '/create_meals',     to:  'posts#meals'
+  get    '/shelters',         to:  'posts#shelters'
+  post   '/create_shelters',  to:  'posts#shelters'
+  get    '/supplies',         to:  'posts#supplies'
+  post   '/create_supplies',  to:  'posts#supplies'
 
-  get 'users/center'
-  put 'users/center'
+  
 
-  get 'posts/jobs'
-  post 'posts/jobs'
-  put 'posts/jobs'
+ 
 
-  get 'posts/meals'
-  post 'posts/meals'
-  put 'posts/meals'
+ 
 
-  get 'posts/shelters'
-  post 'posts/shetlers'
-  put 'posts/shetlers'
-
-
-  get 'posts/supplies'
-  post 'posts/supplies'
-  put 'posts/supplies' 
+ 
 
 
   devise_for :users
 
-  resources :center
+  resources :centers
   
-  resources :post
+  resources :posts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
