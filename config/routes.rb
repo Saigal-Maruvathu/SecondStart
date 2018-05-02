@@ -29,8 +29,8 @@ root 'home#landingpage'
 
   devise_for :users
 
-  resources :center
+  resources :centers
 
-  resources :post
+  resources :posts
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
