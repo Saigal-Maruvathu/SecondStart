@@ -19,5 +19,9 @@ root 'home#landingpage'
     post   '/supplies',      to:  'posts#supplies'
 
   devise_for :users
+
+  resources :center
+  
+  resources :post
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

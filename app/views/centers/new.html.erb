@@ -1,0 +1,22 @@
+<h1>Post Your Center</h1>
+
+<%= form_with scope: :center, url: centers_path, local: true do |form| %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :Location %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :Description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
