@@ -34,7 +34,7 @@
  /*Styling for contact page*/
  #mainContact
  {
-   width: 1225px;
+   width: 1325px;
    height: 600px;
    top: 400px;
    left: 0px;
@@ -46,7 +46,7 @@
   font-size: 40px;
   top: 0px;
   left: 100px;
-  color: yellow;
+  color: darkred;
   position: absolute;
 }
 #general
@@ -54,7 +54,7 @@
   font-size: 40px;
   top: 0px;
   left: 575.205px;
-  color: yellow;
+  color: darkred;
   position: absolute;
 }
 #concern
@@ -62,7 +62,7 @@
   font-size: 40px;
   top: 0px;
   left: 1042.78px;
-  color: yellow;
+  color: darkred;
   position: absolute;
 }
 #facebookPic
