@@ -4,4 +4,12 @@ class HomeController < ApplicationController
 
   def logoutpage
   end
+
+  def about
+  end
+
+  def contact
+  end
+
+
 end
