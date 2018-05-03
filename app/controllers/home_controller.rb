@@ -14,4 +14,7 @@ class HomeController < ApplicationController
   def signup_signin
   end
 
+  def homepage
+  end
+
 end
