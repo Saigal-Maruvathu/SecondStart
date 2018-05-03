@@ -6,7 +6,7 @@ class CentersController < ApplicationController
 
   def create
     c = Center.new
-    redirect_to users_home_path
+    redirect_to center_path
   end
 
   def show

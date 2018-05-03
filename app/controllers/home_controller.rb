@@ -11,4 +11,10 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def signup_signin
+  end
+
+  def homepage
+  end
+
 end

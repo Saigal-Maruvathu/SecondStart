@@ -1,1 +1,28 @@
 <h1>Meals Posted</h1>
+
+<body>
+
+  <h4><% @posts.each do |post| %></h4>
+    <div id="allmeals" style="background-color:lightblue ">
+    <p>
+        <%= post.center.name %>
+    </p>
+
+    <p>
+        <%= post.title %>
+    </p>
+
+    <p>
+        <%= post.content %>
+
+    </p>
+
+    <p>
+        <%=post.updated_at.strftime("%B %d, %Y") %>
+    </p>
+
+    <br>
+
+    <% end %>
+
+</body>
