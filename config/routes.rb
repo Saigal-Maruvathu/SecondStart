@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   get 'home/landingpage'
-  root 'home#landingpage'
+  root 'home#publicpage'
 
   get 'home/logoutpage'
   get 'users/profile'
 
 
     get '/signup_signin', to: 'home#signup_signin'
+    get '/hub', to: 'home#publicpage'
 
     get    '/welcome',   to: 'home#landingpage'
     get     '/center',   to:  'center#users'
