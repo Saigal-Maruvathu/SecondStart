@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
     get '/signup_signin', to: 'home#signup_signin'
 
-    get    '/welcome',   to: 'home#landingpage'
+    get    '/welcome',   to: 'homepage'
     get     '/center',   to:  'center#users'
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
