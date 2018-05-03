@@ -41,10 +41,10 @@ end
 post_list = [
   [ "Soup lunch", "Come get some hearty chicken or vegatable soup", 3, "Meals"],
   [ "Clothing drive", "Many warm jackets and clean socks available", 2, "Supplies"],
-  [ "Shelter open", "About 10 beds are opened up this coming weekend", 4, "Shelter"],
-  [ "Mover needed", "persons needed to make furniture deliveries", 5, "Work"],
-  [ "Sales associate", "person needed who can be enthusiatic with our sales", 1, "Work"],
-  [ "Warm place to stay for the night", "Our place has 15 beds available", 6, "Shelter"],
+  [ "Shelter open", "About 10 beds are opened up this coming weekend", 4, "Shelters"],
+  [ "Mover needed", "persons needed to make furniture deliveries", 5, "Jobs"],
+  [ "Sales associate", "person needed who can be enthusiatic with our sales", 1, "Jobs"],
+  [ "Warm place to stay for the night", "Our place has 15 beds available", 6, "Shelters"],
   [ "Spaghetti dinner", "Pasta dinner is being served next week", 7, "Meals"],
   [ "Toothbrushes and toiletries", "Come get toothbrushed and other supplies for your hygeine needs", 8, "Supplies"],
 ]
