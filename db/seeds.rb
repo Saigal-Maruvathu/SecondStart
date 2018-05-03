@@ -34,8 +34,8 @@ center_list = [
   [ "Greater Philadelphia Coalition Against Hunger", "WestPhilly", "Food Bank(food, shelter, supplies)", 8],
 ]
 
-center_list.each do |name, location, description, user|
-    Center.create( name: name, location: location, description: description, user: user)
+center_list.each do |name, location, description, user_id|
+    Center.create( name: name, location: location, description: description, user_id: user_id)
 end
 
 post_list = [
@@ -50,7 +50,5 @@ post_list = [
 ]
 
 post_list.each do |title, content, center_id, category|
-    Post.create( title: title, content: content, center_id: center_id, category_id: category_id)
+    Post.create( title: title, content: content, center_id: center_id, category: category)
 end
-
-category_list =  "Food", "Supplies", "Shelter", "Jobs"
