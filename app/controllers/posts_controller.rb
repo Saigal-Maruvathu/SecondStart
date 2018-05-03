@@ -33,5 +33,8 @@ class PostsController < ApplicationController
     end
   end
 
-
+  def show_meals
+    @posts = Post.where(category: "Meals")
+    render 'meals'
+  end
 end
