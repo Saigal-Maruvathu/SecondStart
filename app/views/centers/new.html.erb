@@ -22,14 +22,13 @@
 <% end %>
 
    <!-- Trigger/Open The Modal -->
-<button id="jobsBtn" class="button">Jobs</button>
+<button id="jobsBtn" onclick="post.jobs()" class="button">Jobs</button>
 
 <!-- The Modal -->
 <div id="jobsModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Jobs</p>
     <form method="POST" action="/create_job">
     <input type="text" name="[create]title" placeholder="Title">
@@ -42,14 +41,13 @@
 </div>
 
    <!-- Trigger/Open The Modal -->
-<button id="shelterBtn" class="button">Shelter</button>
+<button id="shelterBtn" onclick="post.shelters()" class="button">Shelter</button>
 
 <!-- The Modal -->
 <div id="shelterModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Shelter</p>
     <form method="POST" action="/create_shelter">
     <input type="text" name="[create]title" placeholder="Title">
@@ -62,14 +60,13 @@
 </div>
 
    <!-- Trigger/Open The Modal -->
-<button id="suppliesBtn" class="button">Supplies</button>
+<button id="suppliesBtn" onclick="post.supplies()" class="button">Supplies</button>
 
 <!-- The Modal -->
 <div id="suppliesModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Supplies</p>
     <form method="POST" action="/create_supplies">
     <input type="text" name="[create]title" placeholder="Title">
@@ -82,14 +79,13 @@
 </div>
 
    <!-- Trigger/Open The Modal -->
-<button id="mealsBtn" class="button">Meals</button>
+<button id="mealsBtn" onclick="post.meals()" class="button">Meals</button>
 
 <!-- The Modal -->
 <div id="mealsModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Meals</p>
     <form method="POST" action="/create_meals">
     <input type="text" name="[create]title" placeholder="Title">
