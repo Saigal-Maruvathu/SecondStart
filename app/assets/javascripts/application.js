@@ -16,3 +16,38 @@
 //= require_tree .
 // button names meals, supplies, shelter and jobs followed by Btn
 // div names meals, supplies, shelter and jobs followed by Modal
+var post = {
+  //dashboard.moves makes the pop-up visible
+meals : function() {
+  document.getElementById("mealsModal").style.visibility = "visible";
+
+  document.getElementById("jobsModal").style.visibility = "hidden";
+  document.getElementById("suppliesModal").style.visibility = "hidden";
+  document.getElementById("shelterModal").style.visibility = "hidden";
+}, supplies : function() {
+  document.getElementById("suppliesModal").style.visibility = "visible";
+
+  document.getElementById("mealsModal").style.visibility = "hidden";
+  document.getElementById("jobsModal").style.visibility = "hidden";
+  document.getElementById("shelterModal").style.visibility = "hidden";
+
+}, shelters : function() {
+  document.getElementById("shelterModal").style.visibility = "visible";
+
+  document.getElementById("mealsModal").style.visibility = "hidden";
+  document.getElementById("suppliesModal").style.visibility = "hidden";
+  document.getElementById("jobsModal").style.visibility = "hidden";
+
+}, jobs : function() {
+  document.getElementById("jobsModal").style.visibility = "visible";
+
+  document.getElementById("mealsModal").style.visibility = "hidden";
+  document.getElementById("suppliesModal").style.visibility = "hidden";
+  document.getElementById("shelterModal").style.visibility = "hidden";
+}, close : function() {
+  document.getElementById("mealsModal").style.visibility = "hidden";
+  document.getElementById("suppliesModal").style.visibility = "hidden";
+  document.getElementById("shelterModal").style.visibility = "hidden";
+  document.getElementById("jobsModal").style.visibility = "hidden";
+  }
+};
