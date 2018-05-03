@@ -14,3 +14,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+// button names meals, supplies, shelter and jobs followed by Btn
+// div names meals, supplies, shelter and jobs followed by Modal

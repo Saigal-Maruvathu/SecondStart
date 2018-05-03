@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 root 'home#landingpage'
   get 'home/landingpage'
-  
+
   get 'home/logoutpage'
   get 'users/profile'
 
