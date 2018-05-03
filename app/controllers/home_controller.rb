@@ -10,9 +10,8 @@ class HomeController < ApplicationController
 
   def contact
   end
-<<<<<<< HEAD
 
+  def signup_signin
+  end
 
-=======
->>>>>>> 347899b316486ebf368fe111d00a94f5a6576512
 end

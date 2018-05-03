@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-root 'home#landingpage'
   get 'home/landingpage'
+  root 'home#landingpage'
 
   get 'home/logoutpage'
   get 'users/profile'
+
+
+    get '/signup_signin', to: 'home#signup_signin'
 
     get    '/welcome',   to: 'home#landingpage'
     get     '/center',   to:  'center#users'
@@ -15,9 +18,9 @@ root 'home#landingpage'
     post   '/jobs',      to:  'posts#jobs'
     put   '/jobs',      to:  'posts#jobs'
 
-    get    '/meals',      to:  'posts#meals'
-    post   '/meals',      to:  'posts#meals'
-    put   '/meals',      to:  'posts#meals'
+    get    '/meals',      to:  'posts#show_meals'
+    post   '/meals',      to:  'posts#create_meals'
+    put   '/meals',      to:  'posts#edit_meals'
 
     get    '/shelters',      to:  'posts#shelters'
     post   '/shelters',      to:  'posts#shelters'
