@@ -34,170 +34,30 @@
 {
   text-align: center;
 }
-#guideDiv
-{
-  width: 550px;
-  height: 200px;
-  background-color: lightblue;
-  margin: auto;
-}
-#guideButton
-{
-  border-radius: 15px
+body{
+    margin: auto;
+    text-align: center;
+  }
+container{
+    width: 100%;
 }
 
- /*Styling for contact page*/
- #mainContact
- {
-   width: 1325px;
-   height: 600px;
-   top: 400px;
-   left: 0px;
-   background-color: lightblue;
-   position: absolute;
- }
- #socialMedia
-{
-  font-size: 40px;
-  top: 0px;
-  left: 100px;
-  color: darkred;
-  position: absolute;
+ul {
+    background-color: orange;
+    min-width: 696px;
+    list-style: none;
+    padding: 50px;
+    text-align: right;
+    margin: 0px;
+    border: 0px;
+
 }
-#general
-{
-  font-size: 40px;
-  top: 0px;
-  left: 575.205px;
-  color: darkred;
-  position: absolute;
-}
-#concern
-{
-  font-size: 40px;
-  top: 0px;
-  left: 1042.78px;
-  color: darkred;
-  position: absolute;
-}
-#facebookPic
-{
-  top: 75px;
-  left: 50px;
-  position: absolute;
-}
-#facebook
-{
-  font-size: 25px;
-  top: 67.5px;
-  left: 105px;
-  position: absolute;
-}
-#instagramPic
-{
-  top: 120px;
-  left: 55px;
-  position: absolute;
-}
-#instagram
-{
-  font-size: 25px;
-  top: 115px;
-  left: 105px;
-  position: absolute;
-}
-#snapPic
-{
-  top: 220px;
-  left: 60px;
-  position: absolute;
-}
-#snapchat
-{
-  font-size: 25px;
-  top: 215px;
-  left: 105px;
-  position: absolute;
-}
-#number
-{
-  font-size: 25px;
-  top: 67.5px;
-  left: 565px;
-  position: absolute;
-}
-#street
-{
-  font-size: 25px;
-  top: 105px;
-  left: 556px;
-  position: absolute;
-}
-#cityStateZip
-{
-  font-size: 25px;
-  top: 145px;
-  left: 545px;
-  position: absolute;
-}
-#country
-{
-  font-size: 25px;
-  top: 185px;
-  left: 585px;
-  position: absolute;
-}
-#finalName
-{
-  font-size: 20px;
-  top: 65px;
-  left: 1050px;
-  position: absolute;
-}
-#finalEmail
-{
-  font-size: 20px;
-  top: 130px;
-  left: 1050px;
-  position: absolute;
-}
-#finalMessage
-{
-  font-size: 20px;
-  top: 195px;
-  left: 1050px;
-  position: absolute;
-}
-#nameSection
-{
-  font-size: 20px;
-  top: 65px;
-  left: 1050px;
-  position: absolute;
-}
-#emailSection
-{
-  font-size: 20px;
-  top: 130px;
-  left: 1050px;
-  position: absolute;
-}
-#messageSection
-{
-  font-size: 20px;
-  top: 195px;
-  left: 1050px;
-  position: absolute;
-}
-#sumbitButton
-{
-  font-size: 20px;
-  top: 195px;
-  left: 1050px;
-  position: absolute;
-}
-.pic
-{
-  border-radius: 125px;
-  padding: 25px;
+
+li {
+    display: inline;
+    margin: 10px;
+    font-family: arial;
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
 }
