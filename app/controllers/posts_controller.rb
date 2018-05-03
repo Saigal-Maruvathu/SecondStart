@@ -37,4 +37,20 @@ class PostsController < ApplicationController
     @posts = Post.where(category: "Meals")
     render 'meals'
   end
+
+  def show_supplies
+    @posts = Post.where(category: "Supplies")
+    render 'supplies'
+  end
+
+  def show_shelters
+    @posts = Post.where(category: "Shelters")
+    render 'shelters'
+  end
+
+  def show_jobs
+    @posts = Post.where(category: "Jobs")
+    render 'jobs'
+  end
+
 end
