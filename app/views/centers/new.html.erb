@@ -30,7 +30,8 @@
   <!-- Modal content -->
     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Jobs</p>
-    <form method="POST" action="/create_job">
+    <form method="POST" action="/jobs">
+    <input type="hidden" name="[create]category" value="Jobs">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
@@ -51,7 +52,8 @@
   <!-- Modal content -->
     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Shelter</p>
-    <form method="POST" action="/create_shelter">
+    <form method="POST" action="/shelters">
+    <input type="hidden" name="[create]category" value="Shelters">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
@@ -71,7 +73,8 @@
   <!-- Modal content -->
     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Supplies</p>
-    <form method="POST" action="/create_supplies">
+    <form method="POST" action="/supplies">
+    <input type="hidden" name="[create]category" value="Supplies">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>

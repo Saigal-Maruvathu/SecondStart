@@ -7,7 +7,8 @@ class CentersController < ApplicationController
   def create
     @c = Center.new(center_params)
     @c.user_id = current_user.id
-      render '/centers/new'
+      if @c.save
+        render '/centers/new'
     else
       puts @c.errors.full_messages
       render '/users/center'
@@ -20,7 +21,7 @@ end
 
   def edit
     @center = current_user
-    @center = Center.find(params[:format])
+    @center = Center.find(params[:id])
   end
 
   def update
@@ -32,9 +33,8 @@ end
 
   def destroy
     @center_delete = Center.find(params[:id])
-    @center_delete.delete
     if @center_delete.delete
-      redirect_to "/users/home"
+      redirect_to "/centers/new"
     end
   end
 

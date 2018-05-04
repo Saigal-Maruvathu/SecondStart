@@ -1,0 +1,101 @@
+
+    <p>
+        <%= @center.name %>
+    </p>
+
+    <p><%= @center.location %>
+
+    </p>
+
+    <p>
+        <%= @center.description %>
+
+    </p>
+
+    <p>
+        <%=@center.updated_at.strftime("%B %d, %Y") %>
+    </p>
+
+    <br>
+    <!-- Trigger/Open The Modal -->
+ <button id="jobsBtn" onclick="post.jobs()" class="button">Jobs</button>
+
+ <!-- The Modal -->
+ <div id="jobsModal" class="modal">
+
+   <!-- Modal content -->
+     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+     <p>Jobs</p>
+     <form method="POST" action="/jobs">
+     <input type="hidden" name="[create]category" value="Jobs">
+     <input type="text" name="[create]title" placeholder="Title">
+     <br>
+     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+     <br>
+     <input class="jobsubmit" type="submit" value="Submit">
+     </form>
+
+ </div>
+ </div>
+
+
+    <!-- Trigger/Open The Modal -->
+ <button id="shelterBtn" onclick="post.shelters()" class="button">Shelter</button>
+
+ <!-- The Modal -->
+ <div id="shelterModal" class="modal">
+
+   <!-- Modal content -->
+     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+     <p>Shelter</p>
+     <form method="POST" action="/shelters">
+     <input type="hidden" name="[create]category" value="Shelters">
+     <input type="text" name="[create]title" placeholder="Title">
+     <br>
+     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+     <br>
+     <input class="blogsubmit" type="submit" value="Submit">
+     </form>
+
+ </div>
+ </div>
+
+    <!-- Trigger/Open The Modal -->
+ <button id="suppliesBtn" onclick="post.supplies()" class="button">Supplies</button>
+
+ <!-- The Modal -->
+ <div id="suppliesModal" class="modal">
+
+   <!-- Modal content -->
+     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+     <p>Supplies</p>
+     <form method="POST" action="/supplies">
+     <input type="hidden" name="[create]category" value="Supplies">
+     <input type="text" name="[create]title" placeholder="Title">
+     <br>
+     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+     <br>
+     <input class="blogsubmit" type="submit" value="Submit">
+     </form>
+
+ </div>
+ </div>
+    <!-- Trigger/Open The Modal -->
+ <button id="mealsBtn" onclick="post.meals()" class="button">Meals</button>
+
+ <!-- The Modal -->
+ <div id="mealsModal" class="modal">
+
+   <!-- Modal content -->
+     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+     <p>Meals</p>
+     <form method="POST" action="/meals">
+     <input type="hidden" name="[create]category" value="Meals">
+     <input type="text" name="[create]title" placeholder="Title">
+     <br>
+     <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+     <br>
+     <input class="blogsubmit" type="submit" value="Submit">
+     </form>
+
+ </div>
