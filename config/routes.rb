@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     get    '/logout',    to: 'home#logoutpage'
 
     get    '/welcome',    to: 'home#landingpage'
-    get     '/center',    to: 'centers#users'
     get    '/about',      to: 'home#about'
     get    '/contact',    to: 'home#contact'
     get    '/logout',     to: 'home#logoutpage'
