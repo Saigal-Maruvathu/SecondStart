@@ -4,12 +4,12 @@
 
   <h4><% @posts.each do |post| %></h4>
     <div id="alljobs" style="background-color:lightblue ">
-    <p>
+    <p>Posted by:
         <%= post.center.name %>
     </p>
 
-    <p>
-        <%= post.title %>
+    <p><strong><%= post.title %></strong>
+
     </p>
 
     <p>

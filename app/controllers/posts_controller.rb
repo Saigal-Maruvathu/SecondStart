@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def create
     p = Post.new
-    redirect_to users_home_path
+    redirect_to user_session_path
   end
 
   def show
@@ -32,6 +32,11 @@ class PostsController < ApplicationController
       redirect_to "/users/home"
     end
   end
+
+
+
+
+
 
   def show_meals
     @posts = Post.where(category: "Meals")
