@@ -5,8 +5,13 @@ class CentersController < ApplicationController
   end
 
   def create
-    c = Center.new
-    redirect_to center_path
+      c = Center.new
+      c.user_id = session[:user_id]
+    if c.save
+      redirect_to center_path
+    else
+      render '/users/center'
+    end
   end
 
   def show
