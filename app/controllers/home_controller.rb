@@ -19,10 +19,14 @@ class HomeController < ApplicationController
 
     def about
     end
+  
+  def contact
+  end
 
-    def contact
-    end
+  def signup_signin
+  end
 
-    def homepage
-    end
+  def homepage
+    
+  end
 end

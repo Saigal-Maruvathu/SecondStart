@@ -33,7 +33,7 @@
     <form method="POST" action="/create_job">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
-    <textarea class="POST1" type="text" name="[create]jobpost" placeholder="Post Content" maxlength="150"></textarea>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
     <br>
     <input class="jobsubmit" type="submit" value="Submit">
     </form>
@@ -54,7 +54,7 @@
     <form method="POST" action="/create_shelter">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
-    <textarea class="POST1" type="text" name="[create]blogpost" placeholder="Post Content" maxlength="150"></textarea>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
     <br>
     <input class="blogsubmit" type="submit" value="Submit">
     </form>
@@ -74,7 +74,7 @@
     <form method="POST" action="/create_supplies">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
-    <textarea class="POST1" type="text" name="[create]post" placeholder="Post Content" maxlength="150"></textarea>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
     <br>
     <input class="blogsubmit" type="submit" value="Submit">
     </form>
@@ -90,10 +90,11 @@
   <!-- Modal content -->
     <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
     <p>Meals</p>
-    <form method="POST" action="/create_meals">
+    <form method="POST" action="/meals">
+    <input type="hidden" name="[create]category" value="Meals">
     <input type="text" name="[create]title" placeholder="Title">
     <br>
-    <textarea class="POST1" type="text" name="[create]blogpost" placeholder="Post Content" maxlength="150"></textarea>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
     <br>
     <input class="blogsubmit" type="submit" value="Submit">
     </form>
