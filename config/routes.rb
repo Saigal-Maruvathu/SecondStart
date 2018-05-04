@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/hub', to: 'home#homepage'
 
     get    '/welcome',    to: 'home#landingpage'
-    get     '/center',    to: 'center#users'
+    get     '/center',    to: 'centers#users'
     get    '/about',      to: 'home#about'
     get    '/contact',    to: 'home#contact'
     get    '/logout',     to: 'home#logoutpage'
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     put   '/jobs',        to:  'posts#editjobs'
 
     get    '/meals',      to:  'posts#show_meals'
-    post   '/meals',      to:  'posts#create_meals'
+    post   '/meals',      to:  'posts#create'
     put   '/meals',       to:  'posts#edit_meals'
 
     get    '/shelters',   to:  'posts#show_shelters'

@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    p = Post.new
+    @post = Post.new(post_params)
+    @post.save
     redirect_to user_session_path
   end
 
@@ -34,10 +35,6 @@ class PostsController < ApplicationController
   end
 
 
-
-
-
-
   def show_meals
     @posts = Post.where(category: "Meals")
     render 'meals'
@@ -58,4 +55,8 @@ class PostsController < ApplicationController
     render 'jobs'
   end
 
+private
+  def post_params
+    params.require(:create).permit(:title, :content, :category)
+  end
 end
