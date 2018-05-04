@@ -3,13 +3,13 @@
 <body>
 
   <h4><% @posts.each do |post| %></h4>
-    <div id="allshelters" style="background-color:lightblue ">
-    <p>
+    <div id="alljobs" style="background-color:lightblue ">
+    <p>Posted by:
         <%= post.center.name %>
     </p>
 
-    <p>
-        <%= post.title %>
+    <p><strong><%= post.title %></strong>
+
     </p>
 
     <p>
@@ -17,7 +17,7 @@
 
     </p>
 
-    <p>
+    <p>Posted on:
         <%=post.updated_at.strftime("%B %d, %Y") %>
     </p>
 

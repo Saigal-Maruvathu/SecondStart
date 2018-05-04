@@ -15,6 +15,7 @@ class HomeController < ApplicationController
   end
 
   def homepage
+    
   end
 
 end
