@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
 
     get    '/jobs',       to:  'posts#show_jobs'
-    post   '/jobs',       to:  'posts#create_jobs'
+    post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
 
     get    '/meals',      to:  'posts#show_meals'
@@ -30,11 +30,11 @@ Rails.application.routes.draw do
     put   '/meals',       to:  'posts#edit_meals'
 
     get    '/shelters',   to:  'posts#show_shelters'
-    post   '/shelters',   to:  'posts#create_shelters'
+    post   '/shelters',   to:  'posts#create'
     put   '/shelters',    to:  'posts#edit_shelters'
 
     get    '/supplies',   to:  'posts#show_supplies'
-    post   '/supplies',   to:  'posts#create_supplies'
+    post   '/supplies',   to:  'posts#create'
     put   '/supplies',    to:  'posts#edit_supplies'
 
 
