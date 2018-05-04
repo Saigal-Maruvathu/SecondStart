@@ -8,7 +8,7 @@ class CentersController < ApplicationController
       c = Center.new
       c.user_id = session[:user_id]
     if c.save
-      redirect_to center_path
+      redirect_to centers_path
     else
       render '/users/center'
     end
