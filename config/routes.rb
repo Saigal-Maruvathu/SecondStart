@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     get '/hub', to: 'home#homepage'
 
     get    '/welcome',    to: 'home#landingpage'
-    get     '/center',    to: 'centers#users'
     get    '/about',      to: 'home#about'
     get    '/contact',    to: 'home#contact'
     get    '/logout',     to: 'home#logoutpage'
