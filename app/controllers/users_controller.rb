@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   def new
   end
-<<<<<<< HEAD
-    
     def profile
         
         if !current_user
@@ -10,7 +8,4 @@ class UsersController < ApplicationController
         end
         
     end
-=======
-
->>>>>>> master
 end

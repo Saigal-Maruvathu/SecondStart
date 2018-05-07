@@ -1,14 +1,55 @@
  <h1>Second Start</h1>
- 
+
  <div class= "jobscontainer">
-   <h1>New listings of Jobs</h1>
+   <h3>Last job posting</h3>
+     <div id="last_job" style="background-color:lightblue ">
+        <p>Posted by:
+            <%= @last_job.center.name %>
+        </p>
+
+        <p>
+            <strong><%= @last_job.title %></strong>
+        </p>
+
+        <p>
+            <%= @last_job.content %>
+        </p>
+
+        <p>Posted on:
+            <%=@last_job.updated_at.strftime("%B %d, %Y") %>
+        </p>
+        <br>
  </div>
-   <div class= "sheltercontainer">
-   <h2>New listings of Shelters</h2>
+
+
+ <div class= "sheltercontainer">
+   <h3>New listings of Shelters</h3>
+   <div id="last_shelter" style="background-color:lightblue ">
+      <p>Posted by:
+          <%= @last_shelter.center.name %>
+      </p>
+
+      <p>
+          <strong><%= @last_shelter.title %></strong>
+      </p>
+
+      <p>
+          <%= @last_shelter.content %>
+      </p>
+
+      <p>Posted on:
+          <%=@last_shelter.updated_at.strftime("%B %d, %Y") %>
+      </p>
+      <br>
  </div>
-   <div class= "suppliescontainer">
+
+
+ <div class= "suppliescontainer">
    <h3>New listings of Centers that offer Supplies</h3>
  </div>
-   <div class= "foodcontainer">
-   <h3>New listings of Centers that offer Food</h3>
 
+
+
+ <div class= "foodcontainer">
+   <h3>New listings of Centers that offer Food</h3>
+ </div>

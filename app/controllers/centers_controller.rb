@@ -5,15 +5,17 @@ class CentersController < ApplicationController
   end
 
   def create
-      @c = Center.new(center_params)
-      @c.user_id = current_user.id
+    
+    @c = Center.new(center_params)
+    @c.user_id = current_user.id
       if @c.save
         render '/centers/new'
-      else
-        puts @c.errors.full_messages
-        render '/users/center'
-      end
-  end
+    else
+      puts @c.errors.full_messages
+      render '/users/center'
+    end
+end
+
 
   def show
     @center = Center.find(params[:id])
@@ -21,7 +23,7 @@ class CentersController < ApplicationController
 
   def edit
     @center = current_user
-    @center = Center.find(params[:format])
+    @center = Center.find(params[:id])
   end
 
   def update
@@ -33,9 +35,8 @@ class CentersController < ApplicationController
 
   def destroy
     @center_delete = Center.find(params[:id])
-    @center_delete.delete
     if @center_delete.delete
-      redirect_to "/users/home"
+      redirect_to "/centers/new"
     end
   end
 
