@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     end
 
     def profilepage
+
     end
 
     def logoutpage

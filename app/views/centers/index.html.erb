@@ -1,0 +1,25 @@
+<h4><% @center.each do |center| %></h4>
+    <div id="alljobs" style="background-color:lightblue ">
+    <p>
+        <%= center.name %>
+    </p>
+
+    <p><%= center.location %>
+
+    </p>
+
+    <p>
+        <%= center.description %>
+
+    </p>
+
+    <p>
+        <%=center.updated_at.strftime("%B %d, %Y") %>
+    </p>
+
+    <br>
+    <td><%= link_to 'Show', center_path(center) %></td>
+      <td><%= link_to 'Edit', edit_center_path(center) %></td>
+      <td><%= link_to 'Destroy', center_path(center),method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr><% end %>

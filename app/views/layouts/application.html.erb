@@ -24,16 +24,18 @@
             <li class="active"><a href="/meals">MEALS</a></li>
             <li class="active"><a href="/signup_signin">SIGN-UP/LOG-IN</a></li>
             <li class="active"><a href="/about">ABOUT</a></li>
-            <li class="active"><a href="contact">CONTACT</a></li>
-
+            <li class="active"><a href="/contact">CONTACT</a></li>
+            <% if !current_user.nil? %>
+            <li><a href="/profile/<%= current_user.id %>" id="nav_button">MY PROFILE</a></li>
+            <% end %>
         </ul>
     </div>
 
     <p id="img_cont2">
 
-        <a href="http://www.fb.com"><img src="/assets/facebook.png" /></a>
-        <a href="http://www.instagram.com"><img src="/assets/instagram.png" /></a>
-        <a href="http://www.snapchat.com"><img src="/assets/snapchat.png" /></a>
+        <a target="_blank" href="http://www.fb.com"><img src="/assets/facebook.png" /></a>
+        <a target="_blank" href="http://www.instagram.com"><img src="/assets/instagram.png" /></a>
+        <a target="_blank" href="http://www.snapchat.com"><img src="/assets/snapchat.png" /></a>
 
 
     </p>
