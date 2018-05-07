@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 #  get 'home/profilepage'
-  root 'home#profilepage'
+  root 'home#homepage'
 
   get 'home/logoutpage'
   get 'users/profile'
@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post '/signup_signin', to: 'home#signup_signin'
 
     get    '/welcome',   to: 'home#homepage'
+
     get     '/center',   to:  'center#users'
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
