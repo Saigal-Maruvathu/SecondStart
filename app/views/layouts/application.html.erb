@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Secondstart</title>
     <%= csrf_meta_tags %>
+<<<<<<< HEAD
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,23 +13,61 @@
 
 
   <body>
-
+   
    <div class="container">
        <div class="nav_bar">
            <ul>
-               <li class="active"><a href="/welcome">HOME</a></li>
-               <li class="active"><a href="/jobs">JOBS</a></li>
-               <li class="active"><a href="/shelters">SHELTERS</a></li>
-               <li class="active"><a href="/supplies">SUPPLIES</a></li>
-               <li class="active"><a href="/meals">MEALS</a></li>
-               <li class="active"><a href="/signup_signin">SIGN-UP/LOG-IN</a></li>
-
+               <li class='active'><a href="/welcome">HOME</a></li>
+               <li class='active'><a href="/jobs">JOBS</a></li>
+               <li class='active'><a href="/shelters">SHELTERS</a></li>
+               <li class='active'><a href="/supplies">SUPPLIES</a></li>
+               <li class='active'><a href="/meals">MEALS</a></li>
+               <li class='active'><a href="/users/sign_up">SIGN-UP</a></li>
+        
            </ul>
        </div>
    </div>
-
-   <%= yield %>
-
-
+   
   </body>
 </html>
+=======
+        <%= csp_meta_tag %>
+
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+
+<body>
+
+    <div class="nav_bar">
+
+        <ul>
+            <li><img id="logo" src="/assets/logo.png" /></li>
+            <li class="active"><a href="/welcome">HOME</a></li>
+            <li class="active"><a href="/jobs">JOBS</a></li>
+            <li class="active"><a href="/shelters">SHELTERS</a></li>
+            <li class="active"><a href="/supplies">SUPPLIES</a></li>
+            <li class="active"><a href="/meals">MEALS</a></li>
+            <li class="active"><a href="/signup_signin">SIGN-UP/LOG-IN</a></li>
+            <li class="active"><a href="/about">ABOUT</a></li>
+            <li class="active"><a href="contact">CONTACT</a></li>
+
+        </ul>
+    </div>
+
+    <p id="img_cont2">
+
+        <a href="http://www.fb.com"><img src="/assets/facebook.png" /></a>
+        <a href="http://www.instagram.com"><img src="/assets/instagram.png" /></a>
+        <a href="http://www.snapchat.com"><img src="/assets/snapchat.png" /></a>
+
+
+    </p>
+
+    <%= yield %>
+
+</body>
+
+</html>
+>>>>>>> 20f2dce742e303278520d544e07f8b235f21749b
