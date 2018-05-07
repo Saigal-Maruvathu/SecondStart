@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 #  get 'home/profilepage'
-  root 'home#profilepage'
+  root 'home#homepage'
 
   get 'home/logoutpage'
-  get 'users/profile'
+  
 
 
     get '/signup_signin', to: 'home#signup_signin'
@@ -15,28 +15,24 @@ Rails.application.routes.draw do
     get    '/contact',   to: 'home#contact'
     get    '/logout',    to: 'home#logoutpage'
 
-    get    '/welcome',    to: 'home#landingpage'
-    get     '/center',    to: 'centers#users'
-    get    '/about',      to: 'home#about'
-    get    '/contact',    to: 'home#contact'
-    get    '/logout',     to: 'home#logoutpage'
-
-
-    get    '/jobs',       to:  'posts#show_jobs'
-    post   '/jobs',       to:  'posts#create_jobs'
-    put   '/jobs',        to:  'posts#editjobs'
+    get    '/jobs',       to:  'posts#show_job'
+    post   '/jobs',       to:  'posts#create'
+    put   '/jobs',        to:  'posts#editjob'
 
     get    '/meals',      to:  'posts#show_meals'
     post   '/meals',      to:  'posts#create'
     put   '/meals',       to:  'posts#edit_meals'
 
     get    '/shelters',   to:  'posts#show_shelters'
-    post   '/shelters',   to:  'posts#create_shelters'
+    post   '/shelters',   to:  'posts#create'
     put   '/shelters',    to:  'posts#edit_shelters'
 
     get    '/supplies',   to:  'posts#show_supplies'
-    post   '/supplies',   to:  'posts#create_supplies'
+    post   '/supplies',   to:  'posts#create'
     put   '/supplies',    to:  'posts#edit_supplies'
+    
+    get    '/profile/:id',   to:  'home#profile'
+    post   '/profile',   to:  'post#create'
 
 
   devise_for :users
