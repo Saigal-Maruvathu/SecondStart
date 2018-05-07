@@ -5,14 +5,15 @@ class CentersController < ApplicationController
   end
 
   def create
-    @c = Center.new(center_params)
-    @c.user_id = current_user.id
-      render '/centers/new'
-    else
-      puts @c.errors.full_messages
-      render '/users/center'
-    end
-end
+      @c = Center.new(center_params)
+      @c.user_id = current_user.id
+      if @c.save
+        render '/centers/new'
+      else
+        puts @c.errors.full_messages
+        render '/users/center'
+      end
+  end
 
   def show
     @center = Center.find(params[:id])
