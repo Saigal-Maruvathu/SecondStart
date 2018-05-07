@@ -4,13 +4,13 @@ class HomeController < ApplicationController
            redirect_to root_path 
         end
     end
-    
+
     def welcome
     end
-    
+
     def profilepage
         if !current_user
-           redirect_to welcome_path 
+           redirect_to welcome_path
         end
     end
 
@@ -19,7 +19,7 @@ class HomeController < ApplicationController
 
     def about
     end
-  
+
   def contact
   end
 end

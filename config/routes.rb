@@ -1,26 +1,34 @@
 Rails.application.routes.draw do
+
+
+  #centers/index and centers/show an error i think sai fixed this?
+
+  #these are the same thing
   get 'home/homepage'
   root 'home#homepage'
 
+
+
+  #how do you logout?
   get 'home/logoutpage'
+
+  #what are we doing here?
   get 'users/profile'
 
-
+    #i always get redirected must be because i can't log out.
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
 
-    get    '/welcome',   to: 'home#homepage'
+    # what are we doing with this cuz it doesn't have a view?
     get     '/center',   to:  'center#users'
+
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
+
+    # do we really need a page for this?
     get    '/logout',    to: 'home#logoutpage'
 
-    get    '/welcome',    to: 'home#landingpage'
-    get    '/about',      to: 'home#about'
-    get    '/contact',    to: 'home#contact'
-    get    '/logout',     to: 'home#logoutpage'
-
-
+    # these are cool
     get    '/jobs',       to:  'posts#show_jobs'
     post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
