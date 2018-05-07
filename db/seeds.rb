@@ -47,6 +47,14 @@ post_list = [
   [ "Warm place to stay for the night", "Our place has 15 beds available", 6, "Shelters"],
   [ "Spaghetti dinner", "Pasta dinner is being served next week", 7, "Meals"],
   [ "Toothbrushes and toiletries", "Come get toothbrushed and other supplies for your hygeine needs", 8, "Supplies"],
+  [ "Soup and sandwiches", "Come get some hearty chicken or vegatable soup", 3, "Meals"],
+  [ "Socks and shoes", "Many warm jackets and clean socks available", 2, "Supplies"],
+  [ "Shelter open for this week", "About 10 beds are opened up this coming weekend", 4, "Shelters"],
+  [ "Delivery driver needed", "persons needed to make furniture deliveries", 5, "Jobs"],
+  [ "Retail postion", "person needed who can be enthusiatic with our sales", 1, "Jobs"],
+  [ "Warm place to stay for the night", "Our place has 15 beds available", 6, "Shelters"],
+  [ "Pasta dinner", "Pasta dinner is being served next week", 7, "Meals"],
+  [ "Toothbrushes and supplies", "Come get toothbrushed and other supplies for your hygeine needs", 8, "Supplies"],
 ]
 
 post_list.each do |title, content, center_id, category|

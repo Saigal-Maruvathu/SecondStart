@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
 
+    get     '/profile',   to:  'home#profilepage'
+
     get    '/welcome',   to: 'home#homepage'
 
     get     '/center',   to:  'center#users'

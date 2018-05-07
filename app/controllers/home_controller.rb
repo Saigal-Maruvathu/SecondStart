@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     def signup_signin
         if current_user
-           redirect_to root_path
+          render '/profile'
         end
     end
 
@@ -9,9 +9,6 @@ class HomeController < ApplicationController
     end
 
     def profilepage
-        if !current_user
-           redirect_to welcome_path
-        end
     end
 
     def logoutpage
