@@ -56,6 +56,11 @@ body {
 
 }
 
+#logo{
+    width: 25%;
+    float:left;
+}
+
 .nav_bar {
     width: 100%;
 }
@@ -229,7 +234,7 @@ textarea#message {
     height: 300px;
 }
 
-#logo{
-    width: 25%;
-    float:left;
+#xBtn{
+    width: 55px;
+    border: none;
 }
