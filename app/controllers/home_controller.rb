@@ -8,8 +8,11 @@ class HomeController < ApplicationController
     def welcome
     end
 
-    def profilepage
-        
+    
+    def profile
+        if !current_user
+           redirect_to welcome_path 
+        end
     end
 
     def logoutpage

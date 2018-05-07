@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-    root 'home#homepage'
+#  get 'home/profilepage'
+  root 'home#homepage'
+
+  get 'home/logoutpage'
+ 
 
     #when loggin in we want to ask sophia why doesn't it redirect to home
     #centers/index and centers/show an error i think sai fixed this?
@@ -13,12 +17,20 @@ Rails.application.routes.draw do
     get '/profile', to: 'home#profilepage'
 
 
+
+    get    '/welcome',    to: 'home#landingpage'
+    get    '/about',      to: 'home#about'
+    get    '/contact',    to: 'home#contact'
+    get    '/logout',     to: 'home#logoutpage'
+
+
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
 
     get    '/jobs',       to:  'posts#show_jobs'
     post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
+
 
     get    '/meals',      to:  'posts#show_meals'
     post   '/meals',      to:  'posts#create'
@@ -31,6 +43,9 @@ Rails.application.routes.draw do
     get    '/supplies',   to:  'posts#show_supplies'
     post   '/supplies',   to:  'posts#create'
     put   '/supplies',    to:  'posts#edit_supplies'
+    
+    get    '/profile/:id',   to:  'home#profile'
+    post   '/profile',   to:  'post#create'
 
 
   devise_for :users

@@ -5,6 +5,7 @@ class CentersController < ApplicationController
   end
 
   def create
+    
     @c = Center.new(center_params)
     @c.user_id = current_user.id
       if @c.save
@@ -14,6 +15,7 @@ class CentersController < ApplicationController
       render '/users/center'
     end
 end
+
 
   def show
     @center = Center.find(params[:id])
