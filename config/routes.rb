@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+#  get 'home/profilepage'
+  root 'home#homepage'
 
 
   #centers/index and centers/show an error i think sai fixed this?
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
 
+    get '/profile', to: 'home#profilepage'
     # what are we doing with this cuz it doesn't have a view?
     get     '/center',   to:  'center#users'
 

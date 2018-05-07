@@ -1,0 +1,229 @@
+<!--
+<h1>Home#landingpage</h1>
+<h2>Second Start</h2>
+<p>Find me in app/views/home/landingpage.html.erb</p>
+-->
+
+
+<h1>User Profile, Needs post submission (CRUD)</h1>
+
+
+<% if user_signed_in? %>
+
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% end %>
+
+                <h1>Post Your Center</h1>
+
+                <%= form_with scope: :center, url: centers_path, local: true do |form| %>
+                    <p>
+                        <%= form.label :Name %><br>
+                            <%= form.text_field :name %>
+                    </p>
+
+                    <p>
+                        <%= form.label :Location %><br>
+                            <%= form.text_field :location %>
+                    </p>
+
+                    <p>
+                        <%= form.label :Description %><br>
+                            <%= form.text_area :description %>
+                    </p>
+
+                    <p>
+                        <%= form.submit %>
+                    </p>
+                    <% end %>
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="jobsBtn" onclick="post.jobs()" class="button">Jobs</button>
+
+                        <!-- The Modal -->
+                        <div id="jobsModal" class="modal">
+
+                            <!-- Modal content -->
+                            <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+                            <p>Jobs</p>
+                            <form method="POST" action="/create_job">
+                                <input type="text" name="[create]title" placeholder="Title">
+                                <br>
+                                <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input class="jobsubmit" type="submit" value="Submit">
+                            </form>
+
+                        </div>
+                        </div>
+
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="shelterBtn" onclick="post.shelters()" class="button">Shelter</button>
+
+                        <!-- The Modal -->
+                        <div id="shelterModal" class="modal">
+
+                            <!-- Modal content -->
+                            <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+                            <p>Shelter</p>
+                            <form method="POST" action="/create_shelter">
+                                <input type="text" name="[create]title" placeholder="Title">
+                                <br>
+                                <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input class="blogsubmit" type="submit" value="Submit">
+                            </form>
+
+                        </div>
+                        </div>
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="suppliesBtn" onclick="post.supplies()" class="button">Supplies</button>
+
+                        <!-- The Modal -->
+                        <div id="suppliesModal" class="modal">
+
+                            <!-- Modal content -->
+                            <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+                            <p>Supplies</p>
+                            <form method="POST" action="/create_supplies">
+                                <input type="text" name="[create]title" placeholder="Title">
+                                <br>
+                                <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input class="blogsubmit" type="submit" value="Submit">
+                            </form>
+
+                        </div>
+                        </div>
+                        <!-- Trigger/Open The Modal -->
+                        <button id="mealsBtn" onclick="post.meals()" class="button">Meals</button>
+
+                        <!-- The Modal -->
+                        <div id="mealsModal" class="modal">
+
+                            <!-- Modal content -->
+                            <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+                            <p>Meals</p>
+                            <form method="POST" action="/meals">
+                                <input type="hidden" name="[create]category" value="Meals">
+                                <input type="text" name="[create]title" placeholder="Title">
+                                <br>
+                                <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input class="blogsubmit" type="submit" value="Submit">
+                            </form>
+
+                        </div>
+                        </div>
+=======
+Logged in as <strong><%= current_user.email %></strong>.
+   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+   <% end %>
+   
+  <h1>Post Your Center</h1>
+
+<%= form_with scope: :center, url: centers_path, local: true do |form| %>
+  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :Location %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :Description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+   <!-- Trigger/Open The Modal -->
+<button id="jobsBtn" onclick="post.jobs()" class="button">Jobs</button>
+
+<!-- The Modal -->
+<div id="jobsModal" class="modal">
+
+  <!-- Modal content -->
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+    <p>Jobs</p>
+    <form method="POST" action="/create_job">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+    <br>
+    <input class="jobsubmit" type="submit" value="Submit">
+    </form>
+
+</div>
+</div>
+
+
+   <!-- Trigger/Open The Modal -->
+<button id="shelterBtn" onclick="post.shelters()" class="button">Shelter</button>
+
+<!-- The Modal -->
+<div id="shelterModal" class="modal">
+
+  <!-- Modal content -->
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+    <p>Shelter</p>
+    <form method="POST" action="/create_shelter">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+    <br>
+    <input class="blogsubmit" type="submit" value="Submit">
+    </form>
+
+</div>
+</div>
+
+   <!-- Trigger/Open The Modal -->
+<button id="suppliesBtn" onclick="post.supplies()" class="button">Supplies</button>
+
+<!-- The Modal -->
+<div id="suppliesModal" class="modal">
+
+  <!-- Modal content -->
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+    <p>Supplies</p>
+    <form method="POST" action="/create_supplies">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+    <br>
+    <input class="blogsubmit" type="submit" value="Submit">
+    </form>
+
+</div>
+</div>
+   <!-- Trigger/Open The Modal -->
+<button id="mealsBtn" onclick="post.meals()" class="button">Meals</button>
+
+<!-- The Modal -->
+<div id="mealsModal" class="modal">
+
+  <!-- Modal content -->
+    <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
+    <p>Meals</p>
+    <form method="POST" action="/meals">
+    <input type="hidden" name="[create]category" value="Meals">
+    <input type="text" name="[create]title" placeholder="Title">
+    <br>
+    <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+    <br>
+    <input class="blogsubmit" type="submit" value="Submit">
+    </form>
+
+</div>
+</div>

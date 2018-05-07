@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
     def signup_signin
         if current_user
-           redirect_to root_path 
+           redirect_to root_path
         end
     end
 
@@ -9,9 +9,7 @@ class HomeController < ApplicationController
     end
 
     def profilepage
-        if !current_user
-           redirect_to welcome_path
-        end
+        
     end
 
     def logoutpage
@@ -22,4 +20,24 @@ class HomeController < ApplicationController
 
   def contact
   end
+
+  def signup_signin
+  end
+
+  def homepage
+    @jobs = Post.where(category: "Jobs")
+    @last_job = @jobs.last
+
+    @shelters = Post.where(category: "Shelters")
+    @last_shelter = @shelters.last
+
+    @supplies = Post.where(category: "Supplies")
+    @last_supplies = @supplies.last
+
+    @meals = Post.where(category: "Meals")
+    @last_meal = @meals.last
+
+  end
+
+
 end
