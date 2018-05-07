@@ -1,31 +1,41 @@
 Rails.application.routes.draw do
-root 'home#landingpage'
-  get 'home/landingpage'
+#  get 'home/profilepage'
+  root 'home#profilepage'
 
   get 'home/logoutpage'
   get 'users/profile'
 
-    get    '/welcome',   to: 'home#landingpage'
+
+    get '/signup_signin', to: 'home#signup_signin'
+    post '/signup_signin', to: 'home#signup_signin'
+
+    get    '/welcome',   to: 'home#homepage'
     get     '/center',   to:  'center#users'
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
     get    '/logout',    to: 'home#logoutpage'
 
-    get    '/jobs',      to:  'posts#jobs'
-    post   '/jobs',      to:  'posts#jobs'
-    put   '/jobs',      to:  'posts#jobs'
+    get    '/welcome',    to: 'home#landingpage'
+    get    '/about',      to: 'home#about'
+    get    '/contact',    to: 'home#contact'
+    get    '/logout',     to: 'home#logoutpage'
 
-    get    '/meals',      to:  'posts#meals'
-    post   '/meals',      to:  'posts#meals'
-    put   '/meals',      to:  'posts#meals'
 
-    get    '/shelters',      to:  'posts#shelters'
-    post   '/shelters',      to:  'posts#shelters'
-    put   '/shelters',      to:  'posts#shelters'
+    get    '/jobs',       to:  'posts#show_jobs'
+    post   '/jobs',       to:  'posts#create'
+    put   '/jobs',        to:  'posts#editjobs'
 
-    get    '/supplies',      to:  'posts#supplies'
-    post   '/supplies',      to:  'posts#supplies'
-    put   '/supplies',      to:  'posts#supplies'
+    get    '/meals',      to:  'posts#show_meals'
+    post   '/meals',      to:  'posts#create'
+    put   '/meals',       to:  'posts#edit_meals'
+
+    get    '/shelters',   to:  'posts#show_shelters'
+    post   '/shelters',   to:  'posts#create'
+    put   '/shelters',    to:  'posts#edit_shelters'
+
+    get    '/supplies',   to:  'posts#show_supplies'
+    post   '/supplies',   to:  'posts#create'
+    put   '/supplies',    to:  'posts#edit_supplies'
 
 
   devise_for :users

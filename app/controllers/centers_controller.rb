@@ -5,8 +5,14 @@ class CentersController < ApplicationController
   end
 
   def create
-    c = Center.new
-    redirect_to users_home_path
+      @c = Center.new(center_params)
+      @c.user_id = current_user.id
+      if @c.save
+        render '/centers/new'
+      else
+        puts @c.errors.full_messages
+        render '/users/center'
+      end
   end
 
   def show
@@ -33,5 +39,9 @@ class CentersController < ApplicationController
     end
   end
 
+  private
+    def center_params
+      params.require(:center).permit(:name, :location, :description)
+    end
 
 end
