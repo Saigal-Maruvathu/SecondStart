@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def new
   end
+<<<<<<< HEAD
     
     def profile
         
@@ -9,4 +10,7 @@ class UsersController < ApplicationController
         end
         
     end
+=======
+
+>>>>>>> master
 end

@@ -15,9 +15,21 @@ Rails.application.routes.draw do
     get    '/contact',   to: 'home#contact'
     get    '/logout',    to: 'home#logoutpage'
 
+<<<<<<< HEAD
     get    '/jobs',       to:  'posts#show_job'
     post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjob'
+=======
+    get    '/welcome',    to: 'home#landingpage'
+    get    '/about',      to: 'home#about'
+    get    '/contact',    to: 'home#contact'
+    get    '/logout',     to: 'home#logoutpage'
+
+
+    get    '/jobs',       to:  'posts#show_jobs'
+    post   '/jobs',       to:  'posts#create'
+    put   '/jobs',        to:  'posts#editjobs'
+>>>>>>> master
 
     get    '/meals',      to:  'posts#show_meals'
     post   '/meals',      to:  'posts#create'
