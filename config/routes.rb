@@ -15,16 +15,6 @@ Rails.application.routes.draw do
     get    '/contact',   to: 'home#contact'
     get    '/logout',    to: 'home#logoutpage'
 
-    get    '/jobs',       to:  'posts#show_job'
-    post   '/jobs',       to:  'posts#create'
-    put   '/jobs',        to:  'posts#editjob'
-
-    get    '/welcome',    to: 'home#landingpage'
-    get    '/about',      to: 'home#about'
-    get    '/contact',    to: 'home#contact'
-    get    '/logout',     to: 'home#logoutpage'
-
-
     get    '/jobs',       to:  'posts#show_jobs'
     post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
