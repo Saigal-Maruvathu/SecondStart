@@ -25,6 +25,13 @@
             </div>
 
 
+ <div id="post" class= "sheltercontainer">
+   <h3>New listings of Shelters</h3>
+   <div id="last_shelter" style="background-color:lightblue ">
+      <p>Posted by:
+          <%= @last_shelter.center.name %>
+      </p>
+
         </div>
     </div>
 
@@ -37,9 +44,13 @@
                     <%= @last_shelter.center.name %>
                 </p>
 
-                <p>
-                    <strong><%= @last_shelter.title %></strong>
-                </p>
+     
+      <p>Posted on:
+          <%=@last_shelter.updated_at.strftime("%B %d, %Y") %>
+      </p>
+      <br>
+
+ </div>
 
                 <p>
                     <%= @last_shelter.content %>
