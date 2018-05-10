@@ -193,11 +193,26 @@ form#new_user.new_user {
 
 /* Create three unequal columns that floats next to each other */
 
+#post_column.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 100%;
+    background-color: gold;
+    border-radius: 50px;
+}
+
+#all_post.row{
+    max-width: 90%;
+    margin: auto;
+}
+
 .column {
     float: left;
     padding: 10px;
     height: 100%;
 }
+
 
 .left,
 .right {
@@ -237,4 +252,13 @@ textarea#message {
 #xBtn{
     width: 55px;
     border: none;
+}
+
+#all_post{
+    text-align: center;
+}
+
+#text{
+max-width: 80%;
+    margin: auto;
 }

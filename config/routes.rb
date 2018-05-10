@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
 
 
-    get    '/welcome',    to: 'home#landingpage'
+    get    '/welcome',    to: 'home#homepage'
     get    '/about',      to: 'home#about'
     get    '/contact',    to: 'home#contact'
     get    '/logout',     to: 'home#logoutpage'
@@ -28,24 +28,24 @@ Rails.application.routes.draw do
     get    '/contact',   to: 'home#contact'
 
     get    '/jobs',       to:  'posts#show_jobs'
-    post   '/jobs',       to:  'posts#create'
+    post   '/jobs',       to:  'posts#create_jobs'
     put   '/jobs',        to:  'posts#editjobs'
 
 
     get    '/meals',      to:  'posts#show_meals'
-    post   '/meals',      to:  'posts#create'
+    post   '/meals',      to:  'posts#create_meals'
     put   '/meals',       to:  'posts#edit_meals'
 
-    get    '/shelters',   to:  'posts#show_shelters'
-    post   '/shelters',   to:  'posts#create'
+    get    '/shelters',   to:  'posts#show_shelter'
+    post   '/shelters',   to:  'posts#create_shelter'
     put   '/shelters',    to:  'posts#edit_shelters'
 
     get    '/supplies',   to:  'posts#show_supplies'
-    post   '/supplies',   to:  'posts#create'
+    post   '/supplies',   to:  'posts#create_supplies'
     put   '/supplies',    to:  'posts#edit_supplies'
     
     get    '/profile/:id',   to:  'home#profile'
-    post   '/profile',   to:  'post#create'
+    post   '/profile',   to:  'post#create_profile'
 
 
   devise_for :users

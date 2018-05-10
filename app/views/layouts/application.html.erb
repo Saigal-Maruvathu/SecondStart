@@ -22,7 +22,9 @@
             <li class="active"><a href="/shelters">SHELTERS</a></li>
             <li class="active"><a href="/supplies">SUPPLIES</a></li>
             <li class="active"><a href="/meals">MEALS</a></li>
+            <% if current_user.nil? %>
             <li class="active"><a href="/signup_signin">SIGN-UP/LOG-IN</a></li>
+            <% end %>
             <li class="active"><a href="/about">ABOUT</a></li>
             <li class="active"><a href="/contact">CONTACT</a></li>
             <% if !current_user.nil? %>
