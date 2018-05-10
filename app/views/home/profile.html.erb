@@ -46,10 +46,13 @@
                             <!-- Modal content -->
                             <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
                             <p>Jobs</p>
-                            <form method="POST" action="/create_job">
+                            <form method="POST" action="/jobs">
                                 <input type="text" name="[create]title" placeholder="Title">
                                 <br>
                                 <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input type="hidden" name="[create]category" value="Jobs" />
+                                <%= select_tag "[create]center_id", options_for_select(center_array) %>
                                 <br>
                                 <input class="jobsubmit" type="submit" value="Submit">
                             </form>
@@ -67,10 +70,13 @@
                             <!-- Modal content -->
                             <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
                             <p>Shelter</p>
-                            <form method="POST" action="/create_shelter">
+                            <form method="POST" action="/shelters">
                                 <input type="text" name="[create]title" placeholder="Title">
                                 <br>
                                 <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input type="hidden" name="[create]category" value="Shelters" />
+                                <%= select_tag "[create]center_id", options_for_select(center_array) %>
                                 <br>
                                 <input class="blogsubmit" type="submit" value="Submit">
                             </form>
@@ -87,10 +93,13 @@
                             <!-- Modal content -->
                             <input id="xBtn" type="image" src="/assets/X.png" onclick="post.close()" width="25" height="25">
                             <p>Supplies</p>
-                            <form method="POST" action="/create_supplies">
+                            <form method="POST" action="/supplies">
                                 <input type="text" name="[create]title" placeholder="Title">
                                 <br>
                                 <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input type="hidden" name="[create]category" value="Supplies" />
+                                <%= select_tag "[create]center_id", options_for_select(center_array) %>
                                 <br>
                                 <input class="blogsubmit" type="submit" value="Submit">
                             </form>
@@ -111,6 +120,9 @@
                                 <input type="text" name="[create]title" placeholder="Title">
                                 <br>
                                 <textarea class="POST1" type="text" name="[create]content" placeholder="Post Content" maxlength="150"></textarea>
+                                <br>
+                                <input type="hidden" name="[create]category" value="Meals" />
+                                <%= select_tag "[create]center_id", options_for_select(center_array) %>
                                 <br>
                                 <input class="blogsubmit" type="submit" value="Submit">
                             </form>
