@@ -1,35 +1,23 @@
 Rails.application.routes.draw do
-
 #  get 'home/profilepage'
   root 'home#homepage'
 
   get 'home/logoutpage'
- 
 
-    #when loggin in we want to ask sophia why doesn't it redirect to home
-    #centers/index and centers/show an error i think sai fixed this?
-
-    root 'home#homepage'
 
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
 
 
-    get '/profile', to: 'home#profilepage'
-
-    get    '/welcome',    to: 'home#landingpage'
-    get    '/about',      to: 'home#about'
-    get    '/contact',    to: 'home#contact'
-    get    '/logout',     to: 'home#logoutpage'
-
-
+    get    '/welcome',   to: 'home#homepage'
+    get     '/center',   to:  'center#users'
     get    '/about',     to: 'home#about'
     get    '/contact',   to: 'home#contact'
+    get    '/logout',    to: 'home#logoutpage'
 
     get    '/jobs',       to:  'posts#show_jobs'
     post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
-
 
     get    '/meals',      to:  'posts#show_meals'
     post   '/meals',      to:  'posts#create'

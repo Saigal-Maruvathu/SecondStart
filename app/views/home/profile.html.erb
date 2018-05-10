@@ -4,9 +4,6 @@
 <p>Find me in app/views/home/landingpage.html.erb</p>
 -->
 
-
-<h1>User Profile, Needs post submission (CRUD)</h1>
-
 <% if !current_user.nil? %>
      <li><a href="/profilepage/<%= current_user.id %>" id="nav_button">MY PROFILE</a></li>
      <% end %>
