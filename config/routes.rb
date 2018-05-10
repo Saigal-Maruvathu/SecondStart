@@ -1,51 +1,48 @@
 Rails.application.routes.draw do
-
 #  get 'home/profilepage'
   root 'home#homepage'
 
   get 'home/logoutpage'
- 
+  
 
-    #when loggin in we want to ask sophia why doesn't it redirect to home
-    #centers/index and centers/show an error i think sai fixed this?
-
-    root 'home#homepage'
 
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
 
-    get '/profile', to: 'home#profilepage'
+    get    '/welcome',   to: 'home#homepage'
+    get     '/center',   to:  'center#users'
+    get    '/about',     to: 'home#about'
+    get    '/contact',   to: 'home#contact'
+    get    '/logout',    to: 'home#logoutpage'
 
+    get    '/jobs',       to:  'posts#show_job'
+    post   '/jobs',       to:  'posts#create'
+    put   '/jobs',        to:  'posts#editjob'
 
-
-    get    '/welcome',    to: 'home#homepage'
+    get    '/welcome',    to: 'home#landingpage'
     get    '/about',      to: 'home#about'
     get    '/contact',    to: 'home#contact'
     get    '/logout',     to: 'home#logoutpage'
 
 
-    get    '/about',     to: 'home#about'
-    get    '/contact',   to: 'home#contact'
-
     get    '/jobs',       to:  'posts#show_jobs'
-    post   '/jobs',       to:  'posts#create_jobs'
+    post   '/jobs',       to:  'posts#create'
     put   '/jobs',        to:  'posts#editjobs'
 
-
     get    '/meals',      to:  'posts#show_meals'
-    post   '/meals',      to:  'posts#create_meals'
+    post   '/meals',      to:  'posts#create'
     put   '/meals',       to:  'posts#edit_meals'
 
-    get    '/shelters',   to:  'posts#show_shelter'
-    post   '/shelters',   to:  'posts#create_shelter'
+    get    '/shelters',   to:  'posts#show_shelters'
+    post   '/shelters',   to:  'posts#create'
     put   '/shelters',    to:  'posts#edit_shelters'
 
     get    '/supplies',   to:  'posts#show_supplies'
-    post   '/supplies',   to:  'posts#create_supplies'
+    post   '/supplies',   to:  'posts#create'
     put   '/supplies',    to:  'posts#edit_supplies'
     
     get    '/profile/:id',   to:  'home#profile'
-    post   '/profile',   to:  'post#create_profile'
+    post   '/profile',   to:  'post#create'
 
 
   devise_for :users
