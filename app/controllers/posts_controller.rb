@@ -57,6 +57,6 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.require(:create).permit(:title, :content, :category)
+    params.require(:create).permit(:title, :content, :category, :center_id)
   end
 end
