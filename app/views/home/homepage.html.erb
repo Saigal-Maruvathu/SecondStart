@@ -1,14 +1,15 @@
 <h1>Second Start</h1>
 <div class="row" id="all_post">
 
-    <div id="post_column" class="column">
+    <div id="post_column" class="column jobs">
 
         <div id="post" class="jobscontainer">
-            <h3>Last job posting</h3>
-            <div id="text">
-                <p>Posted by:
+            <div class="text">
+            <h3 class="heading">Newest Job Post</h3>
+                <p class="center_name">Posted by:
                     <%= @last_job.center.name %>
                 </p>
+             <div class="textarea">
 
                 <p>
                     <strong><%= @last_job.title %></strong>
@@ -18,10 +19,11 @@
                     <%= @last_job.content %>
                 </p>
 
-                <p>Posted on:
+                <p class="date">Posted on:
                     <%=@last_job.updated_at.strftime("%B %d, %Y") %>
                 </p>
                 <br>
+                </div>
             </div>
 
 
@@ -35,44 +37,44 @@
         </div>
     </div>
 
-    <div id="post_column" class="column">
+    <div id="post_column" class="column shelter">
        
         <div id="post" class="sheltercontainer">
-            <h3>New listings of Shelters</h3>
-            <div id="text">
-                <p>Posted by:
+            <div class="text">
+            <h3 class="heading">Newest Shelter Listing</h3>
+                <p class="center_name">Posted by:
                     <%= @last_shelter.center.name %>
                 </p>
 
-     
-      <p>Posted on:
-          <%=@last_shelter.updated_at.strftime("%B %d, %Y") %>
-      </p>
-      <br>
+<div class="textarea">
+    
+                <p>
+                    <strong><%= @last_shelter.title %></strong>
+                </p>
 
- </div>
 
                 <p>
                     <%= @last_shelter.content %>
                 </p>
 
-                <p>Posted on:
+                <p class="date">Posted on:
                     <%=@last_shelter.updated_at.strftime("%B %d, %Y") %>
                 </p>
                 <br>
+</div>
             </div>
         </div>
     </div>
 
-    <div id="post_column" class="column">
+    <div id="post_column" class="column supplies">
        
         <div id="post" class="suppliescontainer">
-            <h3>New listings of Centers that offer Supplies</h3>
-            <div id="text">
-                <p>Posted by:
+            <div class="text">
+            <h3 class="heading">Newest Supply Listing</h3>
+                <p class="center_name">Posted by:
                     <%= @last_supplies.center.name %>
                 </p>
-
+<div class="textarea">
                 <p>
                     <strong><%= @last_supplies.title %></strong>
                 </p>
@@ -81,22 +83,25 @@
                     <%= @last_supplies.content %>
                 </p>
 
-                <p>Posted on:
+                <p class="date">Posted on:
                     <%=@last_supplies.updated_at.strftime("%B %d, %Y") %>
                 </p>
                 <br>
+</div>
             </div>
         </div>
     </div>
 
-    <div id="post_column" class="column">
+    <div id="post_column" class="column food">
        
         <div id="post" class="foodcontainer">
-            <h3>New listings of Centers that offer Food</h3>
-            <div id="text">
-                <p>Posted by:
+            <div class="text">
+            <h3 class="heading">Newest Meals Listing</h3>
+                <p class="center_name">Posted by:
                     <%= @last_meal.center.name %>
                 </p>
+                
+                <div class="textarea">
 
                 <p>
                     <strong><%= @last_meal.title %></strong>
@@ -106,10 +111,11 @@
                     <%= @last_meal.content %>
                 </p>
 
-                <p>Posted on:
+                <p class="date">Posted on:
                     <%=@last_meal.updated_at.strftime("%B %d, %Y") %>
                 </p>
                 <br>
+                </div>
             </div>
 
         </div>

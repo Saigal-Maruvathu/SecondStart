@@ -1,25 +1,38 @@
-<h4><% @center.each do |center| %></h4>
-    <div id="alljobs" style="background-color:lightblue ">
-    <p>
-        <%= center.name %>
-    </p>
+<div id="all_post">
+   <h4><% @center.each do |center| %></h4>
+     <div id="job_post" class="center_container">
+   <table width=100% border="solid" style="overflow-x:auto;">
+   
+      <tr>
+        <td class="center">
+       <strong><%= center.name %></strong>
+        
+    </td>
+   
 
-    <p><%= center.location %>
+    <td><%= center.location %>
 
-    </p>
+    </td>
 
-    <p>
+    <td>
         <%= center.description %>
 
-    </p>
+          </td>
 
-    <p>
+    <td class="date">
         <%=center.updated_at.strftime("%B %d, %Y") %>
-    </p>
+    </td>
 
-    <br>
-    <td><%= link_to 'Show', center_path(center) %></td>
-      <td><%= link_to 'Edit', edit_center_path(center) %></td>
+        </tr>
+        </table>
+    <br />
+<!--
+    <tr>
+    <strong><td><%= link_to 'Show', center_path(center) %></td> |
+      <td><%= link_to 'Edit', edit_center_path(center) %></td> |
       <td><%= link_to 'Destroy', center_path(center),method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr><% end %>
+              data: { confirm: 'Are you sure?' } %></td></strong>
+    </tr>
+-->
+</div>
+    <% end %>

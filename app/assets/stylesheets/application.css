@@ -24,6 +24,17 @@ header {
 
 }
 
+td{
+    color: black;
+    margin: auto;
+}
+
+p{
+    margin: 0px;
+}
+
+
+
 a:link {
     text-decoration: none;
     color: black;
@@ -259,6 +270,65 @@ textarea#message {
 }
 
 #text{
-max-width: 80%;
+    max-width: 80%;
+    
+}
+
+#job_post{
+    max-width: 75%;
+    margin: 20px auto;
+}
+
+.center_container{
+    display: flex;
     margin: auto;
+   
+}
+
+.jobscontainer{
+    background-color: lightgray;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.sheltercontainer{
+    background-color: lightcoral;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.suppliescontainer{
+    background-color: lightgreen;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.foodcontainer{
+    background-color: lightskyblue;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.heading{
+    font-weight: 600;
+    font-size: 25px;
+    margin: 10px 10px 0px 10px;
+}
+
+.textarea{
+    
+    margin: 20px 0px 0px 0px
+    
+}
+
+.center_name{
+    font-size: 10px;
+}
+.date{
+    font-size: 10px;
+}
+
+.center{
+    font-size: 25px;
+     margin-right: 10px;
 }
