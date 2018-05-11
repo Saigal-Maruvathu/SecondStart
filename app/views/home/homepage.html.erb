@@ -27,6 +27,13 @@
             </div>
 
 
+ <div id="post" class= "sheltercontainer">
+   <h3>New listings of Shelters</h3>
+   <div id="last_shelter" style="background-color:lightblue ">
+      <p>Posted by:
+          <%= @last_shelter.center.name %>
+      </p>
+
         </div>
     </div>
 
@@ -38,11 +45,13 @@
                 <p class="center_name">Posted by:
                     <%= @last_shelter.center.name %>
                 </p>
+
 <div class="textarea">
     
                 <p>
                     <strong><%= @last_shelter.title %></strong>
                 </p>
+
 
                 <p>
                     <%= @last_shelter.content %>

@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   root 'home#homepage'
 
   get 'home/logoutpage'
-  
 
 
     get '/signup_signin', to: 'home#signup_signin'
     post '/signup_signin', to: 'home#signup_signin'
+
 
     get    '/welcome',   to: 'home#homepage'
     get     '/center',   to:  'center#users'
