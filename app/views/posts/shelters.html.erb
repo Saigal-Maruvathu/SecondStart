@@ -1,28 +1,31 @@
 <h1>Shelters Posted</h1>
 
 <body>
-
+<div id="all_post">
   <h4><% @posts.each do |post| %></h4>
-    <div id="alljobs" style="background-color:lightblue ">
-    <p>Posted by:
-        <%= post.center.name %>
-    </p>
+    <div id="job_post" class="jobscontainer">
 
     <p><strong><%= post.title %></strong>
 
     </p>
-
+    
+       <p class="center_name">Posted by:
+        <%= post.center.name %>
+    </p>
+<div class="textarea">
+    
     <p>
         <%= post.content %>
 
     </p>
 
-    <p>Posted on:
+    <p class="date">Posted on:
         <%=post.updated_at.strftime("%B %d, %Y") %>
     </p>
 
     <br>
-
+</div>
+</div>
     <% end %>
 
 </body>
